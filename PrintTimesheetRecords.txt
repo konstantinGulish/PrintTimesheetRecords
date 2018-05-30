@@ -1,0 +1,11 @@
+Debugging Activity: Print Timesheet Records
+Print_Hours_Billed_To_Project
+Print "Employee Hours Billed to Project" heading
+    Read timesheet record // This is the error since only one record would read 
+    DOWHILE morerecords exist
+        IF timesheet_status = 'FT' THEN
+            Print EmployeeID, Department, Billing Rate, Hours Worked
+        ENDIF
+    ENDDO
+    Read timesheet record //This record could not be read since there are no more records
+END
